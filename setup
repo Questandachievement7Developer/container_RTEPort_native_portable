@@ -1,4 +1,6 @@
 cd ~
+rm -rf /usr/bin/*awk*
+pacman -Syu gawk --noconfirm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash #install nvm so we can install node 10
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -52,4 +54,5 @@ EOM
 yarn 
 yarn theia build
 cd ~
+rm -rf RaiseTheEmpiresPort_Native 
 git clone https://github.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native 
