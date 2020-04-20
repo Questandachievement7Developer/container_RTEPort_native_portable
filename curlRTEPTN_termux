@@ -1,0 +1,27 @@
+#!/bin/sh
+echo Hello Welcome to the empiresandallies Development Environment Complex server
+pkg install git -y
+if [ -z $(which bay) ]; then
+git clone https://github.com/Questandachievement7Developer/UnifiedContainer 
+cd UnifiedContainer
+chmod +x ./unifyServer
+./unifyServer install yes
+echo Project bay has been installed
+#bash ${0}
+fi
+echo Project Bay has been installed
+env SCRIPTCALL=1 bay remove empiresserver
+sleep 5
+bay import "https://github.com/Questandachievement7Developer/container_RTEPort_native_portable"
+#bay update empiresserver
+bin="${PREFIX}/bin/empires-server"
+echo "#!/bin/bash" > ${bin}
+echo "bay launchfg RTEPortableDev" >> ${bin}
+chmod +x ${bin}
+
+printf "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+echo Now you can launch Empires and allies Development Environment from this command 
+echo "=========="
+echo "$ portnativedeploy"
+echo "=========="
+echo "Then Connect to this device IP with 6969 port through your browser"
