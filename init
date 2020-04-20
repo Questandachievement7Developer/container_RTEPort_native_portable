@@ -1,0 +1,9 @@
+## Empires and allies Server container
+echo "Starting Compilation Server"
+echo "Server Starting"
+cd ~/RaiseTheEmpiresPort_Native
+git fetch
+git pull
+cd ~/server
+echo " You can now connect to your browser at port 6969"
+yarn start ~/RaiseTheEmpiresPort_Native --hostname 0.0.0.0 --port 6969
